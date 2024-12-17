@@ -1,4 +1,4 @@
-package com.northcoders.retrofitdemo;
+package com.northcoders.retrofitdemo.ui.mainactivity;
 
 import android.app.Application;
 import android.os.Bundle;
@@ -9,9 +9,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.northcoders.retrofitdemo.R;
 import com.northcoders.retrofitdemo.model.RecordRepository;
-
-import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
     @Override
