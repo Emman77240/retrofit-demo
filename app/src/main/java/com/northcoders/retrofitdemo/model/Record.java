@@ -10,22 +10,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Record {
-    @SerializedName("id")
+
     private Long id;
-
-    @SerializedName("name")
     private String name;
-
-    @SerializedName("artist")
     private String artist;
-
-    @SerializedName("songs")
     private List<String> songs;
-
-    @SerializedName("releaseYear")
     private int releaseYear;
-
-    @SerializedName("inStock")
     private boolean inStock;
 
 }

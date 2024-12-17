@@ -9,5 +9,5 @@ import retrofit2.http.GET;
 
 public interface RecordApiService {
     @GET("records")
-    Call<List<Record>> getRecordsList();
+    Call<List<Record>> getAllRecords();
 }
