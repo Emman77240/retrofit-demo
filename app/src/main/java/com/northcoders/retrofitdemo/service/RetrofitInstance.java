@@ -9,7 +9,7 @@ public class RetrofitInstance {
     private static Retrofit retrofit = null;
     private static final String baseURL = "http://10.0.2.2:8080/api/v1/recordshop/";
 
-    public static RecordApiService getService() {
+    public static AlbumApiService getService() {
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(logging).build();
@@ -21,6 +21,6 @@ public class RetrofitInstance {
                     .client(client)
                     .build();
         }
-        return retrofit.create(RecordApiService.class);
+        return retrofit.create(AlbumApiService.class);
     }
 }

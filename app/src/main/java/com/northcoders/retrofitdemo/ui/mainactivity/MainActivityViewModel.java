@@ -1,25 +1,23 @@
 package com.northcoders.retrofitdemo.ui.mainactivity;
 
 import android.app.Application;
-
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
-
-import com.northcoders.retrofitdemo.model.Record;
-import com.northcoders.retrofitdemo.model.RecordRepository;
+import com.northcoders.retrofitdemo.model.Album;
+import com.northcoders.retrofitdemo.model.AlbumRepository;
 
 import java.util.List;
 
 public class MainActivityViewModel extends AndroidViewModel {
 
-    private RecordRepository recordRepository;
-    public MainActivityViewModel(@NonNull Application application, RecordRepository recordRepository) {
+    private AlbumRepository albumRepository;
+    public MainActivityViewModel(@NonNull Application application) {
         super(application);
-        this.recordRepository = new RecordRepository(application);
+        this.albumRepository = new AlbumRepository(application);
     }
 
-    public LiveData<List<Record>> getAllRecords() {
-        return recordRepository.getMutableLiveData();
+    public LiveData<List<Album>> getAllAlbums() {
+        return albumRepository.getMutableLiveData();
     }
 }

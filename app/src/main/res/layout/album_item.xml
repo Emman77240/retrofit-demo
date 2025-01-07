@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <data>
+        <variable
+            name="album"
+            type="com.northcoders.retrofitdemo.model.Album" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="10dp">
+
+
+            <TextView
+                android:id="@+id/TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/album_cover"
+                android:text="@{album.name}"
+                app:layout_constraintBottom_toBottomOf="@+id/albumIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintStart_toEndOf="@+id/albumIcon"
+                app:layout_constraintStart_toStartOf="@id/albumIcon"
+                app:layout_constraintTop_toTopOf="@id/albumIcon"
+                app:layout_constraintVertical_bias="0.114" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="206dp"
+                android:layout_height="91dp"
+                android:layout_marginTop="64dp"
+                android:text="@{String.valueOf(album.songs)}"
+                app:layout_constraintStart_toStartOf="@+id/TV"
+                app:layout_constraintTop_toBottomOf="@+id/TV" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@{album.artist}"
+                app:layout_constraintStart_toStartOf="@+id/TV"
+                app:layout_constraintTop_toBottomOf="@+id/TV" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="81dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="32dp"
+                android:text="@{String.valueOf(album.releaseYear)}"
+                app:layout_constraintStart_toStartOf="@+id/TV"
+                app:layout_constraintTop_toBottomOf="@+id/TV" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="62dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="144dp"
+                android:text="@{String.valueOf(album.inStock)}"
+                app:layout_constraintStart_toStartOf="@+id/TV"
+                app:layout_constraintTop_toBottomOf="@+id/TV" />
+
+            <ImageView
+                android:id="@+id/albumIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/album_icon"
+                android:src="@drawable/album_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
